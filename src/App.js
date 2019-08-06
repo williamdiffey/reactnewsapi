@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CardList from './CardList/CardList'
 import './App.css';
 
 class App extends React.Component {
@@ -62,12 +62,15 @@ class App extends React.Component {
     // this all needs to go and live in Card.js
     return (
       <div>
-        <ul>
-          <li>{this.state.title[this.state.index]}</li>
-          <li>{this.state.urlToImage[this.state.index]}</li>
-          <li>{this.state.urlToImage[this.state.index]}</li>
-          <li>{this.state.url[this.state.index]}</li>
-        </ul>
+        
+          <CardList
+            index={this.state.index}
+            title={this.state.title}
+            urlToImage={this.state.urlToImage}
+            description={this.state.description}
+            url={this.state.url}
+          />
+        
       </div>
     )
   }
